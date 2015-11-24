@@ -1,28 +1,43 @@
-
+import javax.swing.JOptionPane; 
 
 public class Member
 {
-    // instance variables - replace the example below with your own
-    private int x;
+   
+    private String Fname;
+    private String Sname;
+    private int Mark;
 
-    /**
-     * Constructor for objects of class Member
-     */
+
+    
     public Member()
     {
-        // initialise instance variables
-        x = 0;
+       Fname = "";
+       Sname = "";
+       Mark = 0;
+        
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    public void readMemberDetails(String dataItems)
+{
+
+String[] rowItems = dataItems.split(",");
+  
+  Fname = rowItems[0];
+  Sname = rowItems[1];
+  Mark = Integer.parseInt(rowItems[2]);
+  
+}
+   
+    public String writeDetails()
+{
+    String memberData = "";
+    memberData = memberData.concat(Fname);
+    memberData = memberData.concat(",");
+    memberData = memberData.concat(Sname);
+    memberData = memberData.concat(",");
+    memberData = memberData.concat(Integer.toString(Mark));
+    return memberData;
+}
+
+
 }
