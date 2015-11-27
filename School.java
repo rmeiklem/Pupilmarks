@@ -1,33 +1,27 @@
 
-/**
- * Write a description of class School here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class School
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private Member memberlist [];
 
-    /**
-     * Constructor for objects of class School
-     */
+    int noOFMembers;
     public School()
     {
-        // initialise instance variables
-        x = 0;
+        //placeholder
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    public void processMembers()
     {
-        // put your code here
-        return x + y;
+        setUpMemberList();
+        Topmark();
+    }
+
+    private void setUpMemberList()
+    { 
+        //placeholder
+    }
+
+    public void Topmark()
+    {
+        //placeholder
     }
 }
