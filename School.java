@@ -1,12 +1,13 @@
-
+import javax.swing.JOptionPane;
+import java.io.*;
 public class School
 {
     private Member memberlist [];
-
     int noOFMembers;
+    FILEREADCSV fILEREAD2;
     public School()
     {
-        //placeholder
+        fILEREAD2 = new FILREADCSV();
     }
 
     public void processMembers()
