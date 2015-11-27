@@ -7,7 +7,7 @@ public class School
     FILEREADCSV fILEREAD2;
     public School()
     {
-        fILEREAD2 = new FILREADCSV();
+        fILEREAD2 = new FILEREADCSV();
     }
 
     public void processMembers()
