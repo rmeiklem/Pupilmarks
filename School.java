@@ -3,22 +3,28 @@ import java.io.*;
 public class School
 {
     private Member memberlist [];
-    int noOFMembers;
-    FILEREADCSV fILEREAD2;
+    int noOfMembers;
+    FILEREADCSV fILEREAD;
     public School()
     {
-        fILEREAD2 = new FILEREADCSV();
+        fILEREAD = new FILEREADCSV();
     }
 
-    public void processMembers()
+    public void processMembers() throws IOException
     {
         setUpMemberList();
         Topmark();
     }
 
-    private void setUpMemberList()
+    private void setUpMemberList() throws IOException
     { 
-        //placeholder
+        System.out.println("top mark: top mark update");
+        System.out.println("** preparing to read data file.");
+         
+        String[] datarows = fILEREAD.readCSVtable();
+        noOfMembers = datarows.length - 1;
+        
+        System.out.println("** " + noOfMembers + " rows read.\n\n");
     }
 
     public void Topmark()
