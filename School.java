@@ -34,8 +34,16 @@ public class School
         }
     }
 
-    public void Topmark()
+    public void Topmark() throws IOException
     {
-        //placeholder
-    }
-}
+        int Topmark = 0;
+        for (int i = 0; i < noOfMembers; i++)
+        {
+            if ((memberlist[i].getMark() >topmark)){
+                topmark = topmark +1;
+            }
+            
+            memberlsit[i].displayDetails();  
+                }
+            }
+        }
