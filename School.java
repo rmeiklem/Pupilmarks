@@ -36,14 +36,22 @@ public class School
 
     public void Topmark() throws IOException
     {
+        System.out.println("Pupil with the highest mark\n");
+
         int Topmark = 0;
-        for (int i = 0; i < noOfMembers; i++)
+        for (int i = 1; i < noOfMembers; i++)
         {
-            if ((memberlist[i].getMark() >topmark)){
-                topmark = topmark +1;
+            if (memberlist[i].getMark() > memberlist[Topmark].getMark()){
+                Topmark = i;
             }
-            
-            memberlsit[i].displayDetails();  
-                }
-            }
+
+            memberlist[i].displayDetails();  
         }
+
+        System.out.println("\n The top mark is : " + Topmark);
+        memberlist[Topmark].displayDetails(); 
+        System.out.println();
+    }
+
+    
+}

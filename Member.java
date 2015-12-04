@@ -7,13 +7,12 @@ public class Member
     private String Sname;
     private int Mark;
 
-    
     public Member()
     {
         Fname = "";
         Sname = "";
         Mark = 0;
-
+        
     }
 
     public void readMemberDetails(String dataItems)
@@ -37,5 +36,10 @@ public class Member
         memberData = memberData.concat(Integer.toString(Mark));
         return memberData;
     }
+    public int getMark(){
 
+        return Mark;
+    }
+    
 }
+
