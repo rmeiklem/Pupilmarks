@@ -6,11 +6,13 @@ public class School
     int noOfPupils;
     int Topmark = 0;
     FILEREADCSV fILEREAD;
-    FILEREADCSV highestmark;
+    FILEWRITECSV resultFile;
+    
     public School()
     {
         fILEREAD = new FILEREADCSV();
-        highestmark = new FILEREADCSV();
+        resultFile = new FILEWRITECSV();
+        
     }
 
     public void processMembers() throws IOException
@@ -40,8 +42,10 @@ public class School
 
     public void displaydetails() throws IOException
     {
+        
         System.out.println("Pupil with the highest mark\n" + memberlist[Topmark].getName() + "" + memberlist[Topmark].getMark());
-        highestmark.writeCSVtable(memberlist[Topmark].getName() + "," + memberlist[Topmark].getMark());
+        resultFile.writeCSVtable(memberlist[Topmark].getName() + "," + memberlist[Topmark].getMark());
+        
     }
 
     public void Topmark() throws IOException
@@ -60,6 +64,7 @@ public class School
     }
 
     public static void main(String[] args) throws IOException{
+        
         School mySchool = new School();
         mySchool.processMembers();
     }
