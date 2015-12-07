@@ -6,13 +6,14 @@ public class Member
     private String Fname;
     private String Sname;
     private int Mark;
+    private int Topmark;
 
     public Member()
     {
         Fname = "";
         Sname = "";
         Mark = 0;
-        
+
     }
 
     public void readMemberDetails(String dataItems)
@@ -36,10 +37,14 @@ public class Member
         memberData = memberData.concat(Integer.toString(Mark));
         return memberData;
     }
+
     public int getMark(){
 
         return Mark;
     }
-    
-}
 
+    public String getName ()
+    {
+        return Fname + "" + Sname;
+    }
+}
