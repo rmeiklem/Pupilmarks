@@ -43,8 +43,8 @@ public class School
     public void displaydetails() throws IOException
     {
         
-        System.out.println("Pupil with the highest mark\n" + memberlist[Topmark].getName() + "" + memberlist[Topmark].getMark());
-        resultFile.writeCSVtable(memberlist[Topmark].getName() + "," + memberlist[Topmark].getMark());
+        System.out.println("Pupil with the highest mark \n" + memberlist[Topmark].getName() + " " + memberlist[Topmark].getMark());
+        resultFile.writeCSVtable(memberlist[Topmark].getName() + " , " + memberlist[Topmark].getMark());
         
     }
 

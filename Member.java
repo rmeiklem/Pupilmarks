@@ -10,8 +10,8 @@ public class Member
 
     public Member()
     {
-        Fname = "";
-        Sname = "";
+        Fname = " ";
+        Sname = " ";
         Mark = 0;
 
     }
@@ -45,6 +45,6 @@ public class Member
 
     public String getName ()
     {
-        return Fname + "" + Sname;
+        return Fname + " " + Sname;
     }
 }
